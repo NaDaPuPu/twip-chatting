@@ -3,7 +3,12 @@ html,
 body,
 #root,
 .App {
+  background: $background_color;
+  color: $text_color;
+  font-size: $font_sizepx;
   height: 100%;
+  font-weight: bold;
+  overflow: hidden;
 }
 
 .chattingContainer {
@@ -14,6 +19,9 @@ body,
 }
 
 #log {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -45,7 +53,6 @@ body,
   padding: 3px 0.75rem 3px;
   box-shadow: 3px 3px 3px rgb(50, 50, 50);
 
-  color: white;
   font-weight: bold;
   text-shadow: rgb(86, 58, 46) 2px 0px 0px,
     rgb(86, 58, 46) 1.75517px 0.958851px 0px,
@@ -63,11 +70,17 @@ body,
 }
 
 #log div {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  font-size: 20px;
+  margin: 0 auto 10px;
+  color: white;
   /* 나중에 바꿀 폰트 사이즈 */
-  width: 100%;
+  width: 90%;
+}
+
+.name {
+  color: white;
 }
 
 .colon {
@@ -82,7 +95,6 @@ body,
   padding: 15px;
   box-shadow: 5px 5px 5px rgb(50, 50, 50);
 
-  color: white;
   font-weight: bold;
   text-shadow: rgb(86, 58, 46) 2px 0px 0px,
     rgb(86, 58, 46) 1.75517px 0.958851px 0px,
