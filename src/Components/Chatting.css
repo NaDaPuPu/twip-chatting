@@ -1,0 +1,100 @@
+/* Basic Setting */
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+.chattingContainer {
+  display: flex;
+  height: inherit;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#log {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#log > div.deleted {
+  visibility: hidden;
+}
+#log .emote_wrap {
+  position: relative;
+}
+
+#log .emote_wrap img.emoticon {
+  height: 36px;
+  vertical-align: middle;
+  margin: -5px 0;
+}
+
+#log .meta {
+  box-sizing: border-box;
+  width: fit-content;
+  position: relative;
+  top: 16px;
+  left: 10px;
+  background-color: #ffe5b4;
+  border: #744e3d 4px;
+  border-style: solid;
+  border-radius: 9999px;
+  padding: 3px 0.75rem 3px;
+  box-shadow: 3px 3px 3px rgb(50, 50, 50);
+
+  color: white;
+  font-weight: bold;
+  text-shadow: rgb(86, 58, 46) 2px 0px 0px,
+    rgb(86, 58, 46) 1.75517px 0.958851px 0px,
+    rgb(86, 58, 46) 1.0806px 1.68294px 0px,
+    rgb(86, 58, 46) 0.141474px 1.99499px 0px,
+    rgb(86, 58, 46) -0.832294px 1.81859px 0px,
+    rgb(86, 58, 46) -1.60229px 1.19694px 0px,
+    rgb(86, 58, 46) -1.97998px 0.28224px 0px,
+    rgb(86, 58, 46) -1.87291px -0.701566px 0px,
+    rgb(86, 58, 46) -1.30729px -1.5136px 0px,
+    rgb(86, 58, 46) -0.421592px -1.95506px 0px,
+    rgb(86, 58, 46) 0.567324px -1.91785px 0px,
+    rgb(86, 58, 46) 1.41734px -1.41108px 0px,
+    rgb(86, 58, 46) 1.92034px -0.558831px 0px;
+}
+
+#log div {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  /* 나중에 바꿀 폰트 사이즈 */
+  width: 100%;
+}
+
+.colon {
+  display: none;
+}
+
+.message {
+  border: #744e3d 8px;
+  border-style: dashed double;
+  border-radius: 7px;
+  background-color: #e3bf7d;
+  padding: 15px;
+  box-shadow: 5px 5px 5px rgb(50, 50, 50);
+
+  color: white;
+  font-weight: bold;
+  text-shadow: rgb(86, 58, 46) 2px 0px 0px,
+    rgb(86, 58, 46) 1.75517px 0.958851px 0px,
+    rgb(86, 58, 46) 1.0806px 1.68294px 0px,
+    rgb(86, 58, 46) 0.141474px 1.99499px 0px,
+    rgb(86, 58, 46) -0.832294px 1.81859px 0px,
+    rgb(86, 58, 46) -1.60229px 1.19694px 0px,
+    rgb(86, 58, 46) -1.97998px 0.28224px 0px,
+    rgb(86, 58, 46) -1.87291px -0.701566px 0px,
+    rgb(86, 58, 46) -1.30729px -1.5136px 0px,
+    rgb(86, 58, 46) -0.421592px -1.95506px 0px,
+    rgb(86, 58, 46) 0.567324px -1.91785px 0px,
+    rgb(86, 58, 46) 1.41734px -1.41108px 0px,
+    rgb(86, 58, 46) 1.92034px -0.558831px 0px;
+}
