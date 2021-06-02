@@ -1,4 +1,14 @@
 /* Basic Setting */
+body {
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left 20%,
+    left top,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+}
+
 html,
 body,
 #root,
@@ -25,6 +35,8 @@ body,
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  /* 배경 반투명 그라데이션 */
 }
 
 #log > div.deleted {
@@ -35,7 +47,7 @@ body,
 }
 
 #log .emote_wrap img.emoticon {
-  height: 36px;
+  height: ($font_size * 1.5) px;
   vertical-align: middle;
   margin: -5px 0;
 }
@@ -69,7 +81,7 @@ body,
     rgb(86, 58, 46) 1.92034px -0.558831px 0px;
 }
 
-#log div {
+#log > div {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -77,6 +89,8 @@ body,
   color: white;
   /* 나중에 바꿀 폰트 사이즈 */
   width: 90%;
+
+  animation: fadeIn 0.8s ease, fadeOut 0.8s ease $message_hide_delays forwards;
 }
 
 .name {
@@ -109,4 +123,9 @@ body,
     rgb(86, 58, 46) 0.567324px -1.91785px 0px,
     rgb(86, 58, 46) 1.41734px -1.41108px 0px,
     rgb(86, 58, 46) 1.92034px -0.558831px 0px;
+}
+
+.badge {
+  height: $font_sizepx;
+  margin-right: 3px;
 }
