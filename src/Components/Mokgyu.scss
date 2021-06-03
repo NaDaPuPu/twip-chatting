@@ -1,5 +1,11 @@
 /* Basic Setting */
+$font_size: 24;
+$background_color: white;
+$text_color: white;
+$message_hide_delays: 30s;
+
 body {
+  /* 상단 흰색 그라데이션 */
   -webkit-mask-image: -webkit-gradient(
     linear,
     left 20%,
@@ -15,7 +21,7 @@ body,
 .App {
   background: $background_color;
   color: $text_color;
-  font-size: $font_sizepx;
+  font-size: $font_size px;
   height: 100%;
   font-weight: bold;
   overflow: hidden;
@@ -126,6 +132,10 @@ body,
 }
 
 .badge {
-  height: $font_sizepx;
+  height: $font_size px;
   margin-right: 3px;
+}
+
+#log .partner {
+  display: none;
 }

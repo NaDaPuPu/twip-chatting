@@ -1,0 +1,114 @@
+$font_size: 24;
+$background_color: rgba(0, 0, 0, 1);
+$text_color: white;
+$message_hide_delays: 30s;
+
+body {
+  /* 상단 흰색 그라데이션 */
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left 20%,
+    left top,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+}
+
+html,
+body,
+#root,
+.App {
+  color: $text_color;
+  font-size: $font_size px;
+  height: 100%;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.chattingContainer {
+  display: flex;
+  height: 95%;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#log {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#log > div.deleted {
+  visibility: hidden;
+}
+#log .emote_wrap {
+  position: relative;
+}
+
+#log .emote_wrap img.emoticon {
+  height: ($font_size * 1.5) px;
+  vertical-align: middle;
+  margin: -5px 0;
+}
+
+#log .meta {
+  padding: 3px;
+  box-sizing: border-box;
+  width: fit-content;
+}
+
+#log > div {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  animation: fadeIn 0.8s ease, fadeOut 0.8s ease $message_hide_delays forwards;
+}
+
+#log .meta {
+  border: black solid 2px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: white;
+
+  text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px,
+    rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px,
+    rgb(0, 0, 0) -0.832294px 1.81859px 0px,
+    rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px,
+    rgb(0, 0, 0) -1.87291px -0.701566px 0px,
+    rgb(0, 0, 0) -1.30729px -1.5136px 0px,
+    rgb(0, 0, 0) -0.421592px -1.95506px 0px,
+    rgb(0, 0, 0) 0.567324px -1.91785px 0px,
+    rgb(0, 0, 0) 1.41734px -1.41108px 0px,
+    rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+}
+
+.message {
+  border-radius: 5px;
+  background-color: $background_color;
+  color: black;
+
+  padding: 15px;
+
+  text-shadow: rgb(255, 255, 255) 2px 0px 0px,
+    rgb(255, 255, 255) 1.75517px 0.958851px 0px,
+    rgb(255, 255, 255) 1.0806px 1.68294px 0px,
+    rgb(255, 255, 255) 0.141474px 1.99499px 0px,
+    rgb(255, 255, 255) -0.832294px 1.81859px 0px,
+    rgb(255, 255, 255) -1.60229px 1.19694px 0px,
+    rgb(255, 255, 255) -1.97998px 0.28224px 0px,
+    rgb(255, 255, 255) -1.87291px -0.701566px 0px,
+    rgb(255, 255, 255) -1.30729px -1.5136px 0px,
+    rgb(255, 255, 255) -0.421592px -1.95506px 0px,
+    rgb(255, 255, 255) 0.567324px -1.91785px 0px,
+    rgb(255, 255, 255) 1.41734px -1.41108px 0px,
+    rgb(255, 255, 255) 1.92034px -0.558831px 0px;
+}
+
+.message::before {
+  content: "멍멍냥냥";
+}
+
+.colon {
+  display: none;
+}

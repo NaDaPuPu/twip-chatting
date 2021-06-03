@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
-import "./Chatting.css";
+// import "./Mokgyu.scss";
+import "./MNGG.scss";
 
 const Chatting = () => {
   const [chatText, setChatText] = useState("");
