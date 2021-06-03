@@ -27,13 +27,6 @@ body,
   overflow: hidden;
 }
 
-.chattingContainer {
-  display: flex;
-  height: inherit;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
 #log {
   bottom: 0;
   position: absolute;
@@ -53,7 +46,7 @@ body,
 }
 
 #log .emote_wrap img.emoticon {
-  height: ($font_size * 1.5) px;
+  height: $font_size * 1.5px;
   vertical-align: middle;
   margin: -5px 0;
 }

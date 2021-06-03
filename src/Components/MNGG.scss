@@ -3,6 +3,21 @@ $background_color: rgba(0, 0, 0, 1);
 $text_color: white;
 $message_hide_delays: 30s;
 
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+@keyframes shakeHands {
+  25% {
+    transform: rotate(+15deg) translateX(+1px);
+  }
+  75% {
+    transform: rotate(-15deg) translateX(-1px);
+  }
+}
+
 body {
   /* 상단 흰색 그라데이션 */
   -webkit-mask-image: -webkit-gradient(
@@ -19,7 +34,7 @@ body,
 #root,
 .App {
   color: $text_color;
-  font-size: $font_size px;
+  font-size: calc($font_size * 1px);
   height: 100%;
   font-weight: bold;
   overflow: hidden;
@@ -33,6 +48,8 @@ body,
 }
 
 #log {
+  bottom: 0;
+  position: absolute;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -47,15 +64,9 @@ body,
 }
 
 #log .emote_wrap img.emoticon {
-  height: ($font_size * 1.5) px;
+  height: calc($font_size * 1.5px);
   vertical-align: middle;
   margin: -5px 0;
-}
-
-#log .meta {
-  padding: 3px;
-  box-sizing: border-box;
-  width: fit-content;
 }
 
 #log > div {
@@ -66,8 +77,15 @@ body,
 }
 
 #log .meta {
-  border: black solid 2px;
-  border-radius: 5px;
+  padding: 2px 3px 2px;
+  box-sizing: border-box;
+  width: fit-content;
+  position: relative;
+  top: 5px;
+  z-index: 2;
+
+  border: black solid 2.5px;
+  border-radius: 7px;
   width: 100%;
   background-color: white;
 
@@ -83,12 +101,31 @@ body,
     rgb(0, 0, 0) 1.92034px -0.558831px 0px;
 }
 
+.name {
+  color: white;
+  font-size: calc($font_size * 0.8px);
+}
+
+.name::before {
+  content: "";
+  background-image: url(https://nadapupu.github.io/twip-chatting/MMGG.png);
+  background-size: calc($font_size * 0.8px) calc($font_size * 0.8px);
+  background-color: black;
+  width: calc($font_size * 0.8px);
+  height: calc($font_size * 0.8px);
+  display: inline-block;
+
+  animation: shakeHands 2s linear infinite 0s;
+}
+
 .message {
-  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
   background-color: $background_color;
   color: black;
 
-  padding: 15px;
+  padding: 0.8rem 5px 0.8rem;
 
   text-shadow: rgb(255, 255, 255) 2px 0px 0px,
     rgb(255, 255, 255) 1.75517px 0.958851px 0px,
@@ -106,9 +143,25 @@ body,
 }
 
 .message::before {
-  content: "멍멍냥냥";
+  content: "";
+  background-image: url(https://nadapupu.github.io/twip-chatting/MMGG.png);
+  background-size: calc($font_size * 1.5px) calc($font_size * 1.5px);
+  width: calc($font_size * 1.5px);
+  height: calc($font_size * 1.5px);
+  display: inline-block;
+
+  animation: shakeHands 2s linear infinite 0s;
 }
 
 .colon {
+  display: none;
+}
+
+.badge {
+  height: calc($font_size * 1px);
+  margin-right: 3px;
+}
+
+#log .partner {
   display: none;
 }

@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 // import "./Mokgyu.scss";
+import "./Chatting.css";
 import "./MNGG.scss";
 
 const Chatting = () => {
